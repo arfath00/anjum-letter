@@ -15,40 +15,61 @@ font-family:Arial;
 overflow-x:hidden;
 }
 
-/* CLEAR BACKGROUND IMAGE */
+/* GIRL IMAGE CLEAR */
 .top-img{
 width:100%;
 height:100vh;
 object-fit:cover;
-opacity:0.75;
+opacity:0.55;
 position:fixed;
 top:0;
 left:0;
 z-index:1;
-filter: blur(0.5px) brightness(1.05);
+filter: blur(0.8px) brightness(1.05);
 }
 
-/* LIQUID GLASS LETTER */
+/* LIGHT GLASS LETTER */
 .container{
 width:90%;
 max-width:500px;
-margin:300px auto 30px auto;
+margin:280px auto 30px auto;
 padding:25px;
 border-radius:20px;
-background:rgba(255,255,255,0.12);
-backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
+background:rgba(255,255,255,0.35);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
 box-shadow:0 8px 32px rgba(0,0,0,0.2);
 position:relative;
 z-index:5;
 }
 
-/* BLACK TEXT */
+/* TEXT BLACK */
 p,h1{
 color:black;
-text-shadow:none;
 text-align:center;
 line-height:1.6;
+opacity:0;
+animation:fadeIn 2s forwards;
+}
+
+/* SLOW REVEAL */
+p:nth-child(2){animation-delay:1s;}
+p:nth-child(3){animation-delay:2s;}
+p:nth-child(4){animation-delay:3s;}
+p:nth-child(5){animation-delay:4s;}
+p:nth-child(6){animation-delay:5s;}
+p:nth-child(7){animation-delay:6s;}
+p:nth-child(8){animation-delay:7s;}
+p:nth-child(9){animation-delay:8s;}
+p:nth-child(10){animation-delay:9s;}
+p:nth-child(11){animation-delay:10s;}
+p:nth-child(12){animation-delay:11s;}
+p:nth-child(13){animation-delay:12s;}
+p:nth-child(14){animation-delay:13s;}
+p:nth-child(15){animation-delay:14s;}
+
+@keyframes fadeIn {
+to {opacity:1;}
 }
 
 /* SHAYARI */
@@ -119,7 +140,7 @@ animation:bloom 2s linear forwards;
 
 <p>She simply told me that she is already committed. For a few seconds, I froze… and still, I feel the same — that I want to know her more.</p>
 
-<p>If there is any heart physio she can do to calm my heart, I would ask for it. I’m the kind of person who simply expresses what he feels.</p>
+<p>If there is any heart physiotherpy she can do to calm my heart, I would ask for it. I’m the kind of person who simply expresses what he feels.</p>
 
 <p>You made me feel that you are different.</p>
 
@@ -140,27 +161,23 @@ animation:bloom 2s linear forwards;
 <p>If you do not call me, let me tell you a few lines...</p>
 
 <div class="shayari">
+<p>{Intezar 2.10 am 
+Haa hai intezar jab tak bath ho nai jati 
+Raat din mahine guzar jayenge lakin a bath dil se bhulahi nai jati
 
-<p>
-{Intezar 2.10 am <br><br>
-Haa hai intezar jab tak bath ho nai jati <br>
-Raat din mahine guzar jayenge lakin a bath dil se bhulahi nai jati <br><br>
+Ky a mera yaad krna apko yaad nahi aata 
+Ky apko a yaad nahi ki Mai Kehke gaya tha ki Mai yaad karunga 
 
-Ky a mera yaad krna apko yaad nahi aata <br>
-Ky apko a yaad nahi ki Mai Kehke gaya tha ki Mai yaad karunga <br><br>
-
-Karunga lakin apse kahunga kaise <br>
-Kaise Jaise aathi hai hijkiya <br>
-Jaise Badal may barasti hai bijliyan <br><br>
+Karunga lakin apse kahunga kaise
+Kaise Jaise aathi hai hijkiya 
+Jaise Badal may barasti hai bijliyan 
  
-Khair tum bhool jayoge Jaise <br>
-Tumne kaha tha ki ham bhuljange aapko <br>
-Khair kudh ko bhool jayenge lakin <br>
-yaad rakhenge aapko a baten dil ki hai lifafa nahi <br>
-Samandar may pani kam hojayega lakin <br>
-Intezar katam hoga nahi}
-</p>
-
+Khair tum bhool jayoge Jaise
+Tumne kaha tha ki ham bhuljange aapko 
+Khair kudh ko bhool jayenge lakin 
+yaad rakhenge aapko a baten dil ki hai lifafa nahi
+Samandar may pani kam hojayega lakin 
+Intezar katam hoga nahi}</p>
 </div>
 
 </div>
@@ -174,7 +191,7 @@ function start(){
 document.getElementById("tap").style.display="none";
 document.getElementById("bgMusic").play();
 
-for(let i=0;i<30;i++){
+for(let i=0;i<40;i++){
 let flower=document.createElement("div");
 flower.className="flower";
 flower.innerHTML="🌸";
