@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Note For You</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(-45deg,#cceeff,#ffd6ec,#e6f7ff,#ffe6f2);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+background:rgba(255,255,255,0.35);
+backdrop-filter:blur(10px);
+margin:40px auto;
+padding:40px;
+border-radius:20px;
+width:85%;
+max-width:700px;
+box-shadow:0 0 25px rgba(0,0,0,0.1);
+text-align:center;
+position:relative;
+z-index:2;
+}
+
+h1{
+color:#ff66a3;
+margin-bottom:30px;
+}
+
+p{
+color:#333;
+font-size:18px;
+line-height:1.7;
+opacity:0;
+animation:fade 2s forwards;
+}
+
+p:nth-child(2){animation-delay:1s;}
+p:nth-child(3){animation-delay:2s;}
+p:nth-child(4){animation-delay:3s;}
+p:nth-child(5){animation-delay:4s;}
+p:nth-child(6){animation-delay:5s;}
+p:nth-child(7){animation-delay:6s;}
+p:nth-child(8){animation-delay:7s;}
+p:nth-child(9){animation-delay:8s;}
+p:nth-child(10){animation-delay:9s;}
+p:nth-child(11){animation-delay:10s;}
+p:nth-child(12){animation-delay:11s;}
+p:nth-child(13){animation-delay:12s;}
+p:nth-child(14){animation-delay:13s;}
+p:nth-child(15){animation-delay:14s;}
+
+@keyframes fade{
+to{opacity:1;}
+}
+
+.shayari{
+background:rgba(255,255,255,0.4);
+padding:15px;
+border-radius:15px;
+margin-top:20px;
+font-style:italic;
+white-space:pre-line;
+}
+
+.nurse{
+position:fixed;
+bottom:0;
+right:0;
+width:260px;
+opacity:0.35;
+z-index:1;
+animation:breath 5s infinite ease-in-out;
+}
+
+@keyframes breath{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+.heart{
+position:fixed;
+color:white;
+font-size:20px;
+animation:float 6s linear infinite;
+opacity:0.6;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+.container{
+width:92%;
+padding:25px;
+margin:30px auto;
+}
+
+h1{
+font-size:26px;
+}
+
+p{
+font-size:16px;
+}
+
+.nurse{
+width:170px;
+right:-15px;
+opacity:0.25;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="nurse.png" class="nurse">
+
+<audio id="bgmusic" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+
+<h1>Dear Anjum 🌸</h1>
+
+<p>Her name is Anjum. That’s all I know.</p>
+
+<p>I went to physio center for treatment and its been 12 days i have notices her setting simple while she dont have a work no phone no unnecessary talks.</p>
+
+<p>And the days come she is infront me standing with low voice and bright eyes like clear water shows up in her soul.</p>
+
+<p>I liked her cuz of her behavior cuz of her way talking to people i told her one day that im impressed by her and wana know more about her and when i was telling her that i liked in such a beautifull way my heart beat fast as it can.</p>
+
+<p>She simply told me that she is already committed for few seconds i was froze and still feels same like i wana know her more.</p>
+
+<p>If there is any heart physiyo she can do to my heart to clam it thinking about this isnt too much actualy im kinda a guy what ever i feel i just put it up telling people that there to beautifulll with ther inner buity i just wana confess u that u made me feel that ur different.</p>
+
+<p>And me i dont take anything serious simply like u . ur things making me typeing here taking with chatgpt in 1:31 am on sunday moring making a qr code exspecaily for u by listing anuv jain songs.</p>
+
+<p>And that isnt enough i share everything allah even if i feel something so there is ntg serious but u.</p>
+
+<p>u anjum its a time i wanna tell u these all so im telling it take this as u like but me i just feel that i wana confess so i did.</p>
+
+<p>i wanna talk to u in call and u cant meet in person its not possible so.</p>
+
+<p>I will wait for ur call for years may be hoping for u call will come.</p>
+
+<p>And u told i will forget it in weeks or in a month nah not like that if a stranger helps me little i will remember him years.</p>
+
+<p>and when u locked my heart with something i really like in girls perfectly and as same u shows up to me how can i forget it.</p>
+
+<p>If u donnot call me let me telll u few lines</p>
+
+<div class="shayari">
+{Intezar 2.10 am 
+Haa hai intezar jab tak bath ho nai jati 
+Raat din mahine guzar jayenge lakin a bath dil se bhulahi nai jati
+
+Ky a mera yaad krna apko yaad nahi aata 
+Ky apko a yaad nahi ki Mai Kehke gaya tha ki Mai yaad karunga 
+
+ Karunga lakin apse kahunga kaise
+ Kaise Jaise aathi hai hijkiya 
+ Jaise Badal may barasti hai bijliyan 
+ 
+ Khair tum bhool jayoge Jaise
+Tumne  kaha tha ki ham bhuljange aapko 
+Khair kudh ko bhool jayenge lakin 
+yaad rakhenge aapko a baten dil ki hai lifafa nahi
+Samandar may pani kam hojayega lakin 
+Intezar katam hoga nahi }
+</div>
+
+<p>Wha wha tho bolo last may khair I’m a Shayar too…</p>
+<p>Aur over hai tho shayeri hass ko gachup Hojana</p>
+
+</div>
+
+<script>
+
+function heart(){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="🤍";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=Math.random()*15+10+"px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+}
+setInterval(heart,400);
+
+document.body.addEventListener("click",function(){
+document.getElementById("bgmusic").play();
+},{once:true});
+
+</script>
+
+</body>
+</html>
