@@ -10,72 +10,85 @@
 body{
 margin:0;
 padding:0;
-background:linear-gradient(135deg,#d0f0ff,#ffd6ec);
-font-family:Arial;
+font-family:'Georgia', serif;
 overflow-x:hidden;
+background:#f4f6ff;
 }
 
-/* GIRL IMAGE CLEAR */
+/* BACKGROUND IMAGE */
 .top-img{
 width:100%;
 height:100vh;
 object-fit:cover;
-opacity:0.55;
 position:fixed;
 top:0;
 left:0;
-z-index:1;
-filter: blur(0.8px) brightness(1.05);
+z-index:-2;
+opacity:0.85;
 }
 
-/* LIGHT GLASS LETTER */
+/* MIRROR SHADE OVERLAY */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+to bottom,
+rgba(255,255,255,0.25),
+rgba(255,255,255,0.05)
+);
+backdrop-filter: blur(4px);
+z-index:-1;
+}
+
+/* LETTER CONTAINER */
 .container{
 width:90%;
-max-width:500px;
-margin:280px auto 30px auto;
-padding:25px;
-border-radius:20px;
-background:rgba(255,255,255,0.35);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-box-shadow:0 8px 32px rgba(0,0,0,0.2);
-position:relative;
-z-index:5;
+max-width:520px;
+margin:220px auto 60px auto;
+padding:35px;
+background:rgba(255,255,255,0.92);
+border-radius:10px;
+box-shadow:0 12px 35px rgba(0,0,0,0.2);
 }
 
-/* TEXT BLACK */
-p,h1{
-color:black;
+/* TEXT MIRROR EFFECT */
+h1{
 text-align:center;
-line-height:1.6;
+margin-bottom:30px;
+color:#222;
+text-shadow:
+0 1px 0 rgba(255,255,255,0.9),
+0 3px 6px rgba(0,0,0,0.2);
+}
+
+p{
+text-align:center;
+line-height:1.8;
+font-size:16px;
+margin-bottom:20px;
+color:#222;
+text-shadow:
+0 1px 0 rgba(255,255,255,0.8),
+0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* WORD ANIMATION */
+.word{
 opacity:0;
-animation:fadeIn 2s forwards;
+display:inline-block;
+transform:translateY(8px);
+animation:fadeUp 0.6s forwards;
 }
 
-/* SLOW REVEAL */
-p:nth-child(2){animation-delay:1s;}
-p:nth-child(3){animation-delay:2s;}
-p:nth-child(4){animation-delay:3s;}
-p:nth-child(5){animation-delay:4s;}
-p:nth-child(6){animation-delay:5s;}
-p:nth-child(7){animation-delay:6s;}
-p:nth-child(8){animation-delay:7s;}
-p:nth-child(9){animation-delay:8s;}
-p:nth-child(10){animation-delay:9s;}
-p:nth-child(11){animation-delay:10s;}
-p:nth-child(12){animation-delay:11s;}
-p:nth-child(13){animation-delay:12s;}
-p:nth-child(14){animation-delay:13s;}
-p:nth-child(15){animation-delay:14s;}
-
-@keyframes fadeIn {
-to {opacity:1;}
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
 }
-
-/* SHAYARI */
-.shayari{
-margin-top:40px;
-font-style:italic;
 }
 
 /* TAP SCREEN */
@@ -100,18 +113,30 @@ color:#e91e63;
 border:none;
 border-radius:15px;
 font-size:18px;
+cursor:pointer;
 }
 
 /* FLOWERS */
 .flower{
 position:fixed;
-font-size:30px;
+font-size:28px;
 animation:bloom 2s linear forwards;
 }
 
 @keyframes bloom{
 0%{transform:scale(0);opacity:1;}
 100%{transform:scale(3);opacity:0;}
+}
+
+.shayari{
+margin-top:40px;
+font-style:italic;
+white-space:pre-line;
+text-align:center;
+color:#222;
+text-shadow:
+0 1px 0 rgba(255,255,255,0.8),
+0 2px 5px rgba(0,0,0,0.15);
 }
 
 </style>
@@ -130,54 +155,57 @@ animation:bloom 2s linear forwards;
 
 <h1>Dear Anjum 🌸</h1>
 
-<p>Her name is Anjum — that’s all I know.</p>
+<p class="animate">Her name is Anjum — that’s all I know.</p>
 
-<p>I went to the physio center for treatment and it’s been 12 days. I noticed her sitting quietly when she didn’t have any work — no phone, no unnecessary talks.</p>
+<p class="animate">I went to the physiotherapy center for treatment, and it’s been 12 days. I noticed her sitting quietly when she didn’t have any work — no phone, no unnecessary talks.</p>
 
-<p>One day she stood in front of me with a soft voice and bright eyes, like clear water showing the calmness of her soul.</p>
+<p class="animate">One day she stood in front of me with a soft voice and bright eyes, like clear water showing the calmness of her soul.</p>
 
-<p>I liked her because of her behavior — the way she talks to people. I told her one day that I’m impressed by her and wanted to know more about her. While I was saying that in such a beautiful way, my heart was beating as fast as it could.</p>
+<p class="animate">I liked her because of her behavior — the way she talks to people. I told her one day that I’m impressed by her and wanted to know more about her. While I was saying that, my heart was beating as fast as it could.</p>
 
-<p>She simply told me that she is already committed. For a few seconds, I froze… and still, I feel the same — that I want to know her more.</p>
+<p class="animate">She simply told me that she is already committed. For a few seconds, I froze… and still, I feel the same — that I want to know her more.</p>
 
-<p>If there is any heart physio she can do to calm my heart, I would ask for it. I’m the kind of person who simply expresses what he feels.</p>
+<p class="animate">If there is any heart physiotherpy she can do to calm my heart, I would ask for it. I’m the kind of person who simply expresses what he feels.</p>
 
-<p>You made me feel that you are different.</p>
+<p class="animate">You made me feel that you are different.</p>
 
-<p>And here I am, typing this at 1:31 AM on a Sunday morning, making a QR code especially for you while listening to Anuv Jain songs.</p>
+<p class="animate">And here I am, typing this at 1:31 AM on a Sunday morning, making a QR code especially for you while listening to Anuv Jain songs.</p>
 
-<p>I share everything with Allah, even my feelings. There is nothing serious — but you.</p>
+<p class="animate">In the middle of rereading this again and again, it’s now 4:20 AM while I’m editing this line.</p>
 
-<p>I just wanted to confess what I felt. Take this however you like.</p>
+<p class="animate">I just wanted to confess what I felt. Take this however you like.</p>
 
-<p>I would like to talk to you on a call since meeting in person isn’t possible.</p>
+<p class="animate">I would like to talk to you on a call since meeting in person isn’t possible.</p>
 
-<p>I will wait for your call for years, maybe… hoping that it will come.</p>
+<p class="animate">I will wait for your call for years, maybe… hoping that it will come.</p>
 
-<p>You told me I might forget this in weeks or in a month — but not like that. Even if a stranger helps me a little, I remember them for years.</p>
+<p class="animate">You told me I might forget this in weeks or in a month — but not like that. Even if a stranger helps me a little, I remember them for years.</p>
 
-<p>And when you locked my heart with something I really admire in girls — how can I forget it?</p>
+<p class="animate">And when you locked my heart with something I really admire — how can I forget it?</p>
 
-<p>If you do not call me, let me tell you a few lines...</p>
+<p class="animate">If you do not call me, let me tell you a few lines...</p>
 
 <div class="shayari">
-<p>{Intezar 2.10 am 
+{Intezar 2.10 am 
 Haa hai intezar jab tak bath ho nai jati 
 Raat din mahine guzar jayenge lakin a bath dil se bhulahi nai jati
 
 Ky a mera yaad krna apko yaad nahi aata 
 Ky apko a yaad nahi ki Mai Kehke gaya tha ki Mai yaad karunga 
 
-Karunga lakin apse kahunga kaise
-Kaise Jaise aathi hai hijkiya 
-Jaise Badal may barasti hai bijliyan 
+ Karunga lakin apse kahunga kaise
+ Kaise Jaise aathi hai hijkiya 
+ Jaise Badal may barasti hai bijliyan 
  
-Khair tum bhool jayoge Jaise
-Tumne kaha tha ki ham bhuljange aapko 
+ Khair tum bhool jayoge Jaise
+Tumne  kaha tha ki ham bhuljange aapko 
 Khair kudh ko bhool jayenge lakin 
 yaad rakhenge aapko a baten dil ki hai lifafa nahi
 Samandar may pani kam hojayega lakin 
-Intezar katam hoga nahi}</p>
+Intezar katam hoga nahi }
+
+wha wha bolo 
+if its looks like thoda jiyada hogaya then hone dho  hova tho ek bar nai tho bar bar 
 </div>
 
 </div>
@@ -187,11 +215,13 @@ Intezar katam hoga nahi}</p>
 </audio>
 
 <script>
+
 function start(){
 document.getElementById("tap").style.display="none";
 document.getElementById("bgMusic").play();
+animateWords();
 
-for(let i=0;i<40;i++){
+for(let i=0;i<35;i++){
 let flower=document.createElement("div");
 flower.className="flower";
 flower.innerHTML="🌸";
@@ -201,6 +231,24 @@ document.body.appendChild(flower);
 setTimeout(()=>flower.remove(),2000);
 }
 }
+
+/* WORD BY WORD ANIMATION */
+function animateWords(){
+let elements=document.querySelectorAll(".animate");
+
+elements.forEach((el)=>{
+let words=el.innerHTML.split(" ");
+el.innerHTML="";
+words.forEach((word,i)=>{
+let span=document.createElement("span");
+span.className="word";
+span.style.animationDelay=(i*0.12)+"s";
+span.innerHTML=word+"&nbsp;";
+el.appendChild(span);
+});
+});
+}
+
 </script>
 
 </body>
